@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lexend:wght@100..900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-inconsolata: "Inconsolata", monospace;
+}
+
+body {
+    overflow-x: hidden;
+  }
+  * Hide scrollbar for all browsers */
+.scroll-hidden {
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+@layer base {
+
+  body {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+* {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
