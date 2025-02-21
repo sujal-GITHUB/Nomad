@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lexend:wght@100..900&display=swap');
-@import "tailwindcss";
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss"; 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-inconsolata: "Inconsolata", monospace;
+  --font-lexend: "Lexend", sans-serif;
+  --font-pt-sans: "PT Sans", sans-serif;
 }
 
+/* General Styles */
 body {
-    overflow-x: hidden;
-  }
-  * Hide scrollbar for all browsers */
+  overflow-x: hidden;
+  font-family: var(--font-lexend), sans-serif; /* Default font */
+}
+
+/* Hide scrollbar */
 .scroll-hidden {
   scrollbar-width: none; /* Firefox */
 }
@@ -18,12 +23,13 @@ body {
   display: none; /* Chrome, Safari */
 }
 
+/* Smooth Theme Transitions */
 @layer base {
-
   body {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 }
+
 * {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }

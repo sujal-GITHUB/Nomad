@@ -32,7 +32,7 @@ const DarkModeToggle: React.FC = () => {
       whileHover={{ scale: 1.1, transition: { duration: 0.2, ease: "easeOut" } }}
       whileTap={{ scale: 0.9, transition: { duration: 0.15, ease: "easeInOut" } }}
     >
-      {darkMode ? <Sun size={22} className="text-yellow-400" /> : <Moon size={22} className="text-gray-900 dark:text-white" />}
+      {darkMode ? <Sun size={22} className="text-indigo-600" /> : <Moon size={22} className="text-gray-900 dark:text-white" />}
     </motion.button>
   );
 };

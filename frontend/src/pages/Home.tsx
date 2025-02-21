@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Home/Navbar";
 import Hero from "../components/Home/Hero";
-import bg_light from "../assets/main_bg_light.jpg";
-import bg_dark from "../assets/main_bg_dark.jpg";
+import Top from "../components/ui/Top";
+import Features from "../components/Home/Features";
+import Contact from "../components/Home/Contact";
 
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(
@@ -10,28 +11,30 @@ const Home = () => {
   );
 
   useEffect(() => {
-    // Function to update dark mode state
-    const checkDarkMode = () => {
+    const observer = new MutationObserver(() => {
       setIsDarkMode(document.documentElement.classList.contains("dark"));
-    };
+    });
 
-    // Observe changes to the classList of <html> to detect dark mode toggling
-    const observer = new MutationObserver(checkDarkMode);
-    observer.observe(document.documentElement, { attributes: true });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="w-full min-h-screen p-3 overflow-x-hidden overflow-y-auto">
-      <div
-        className="w-full h-full rounded-2xl bg-cover bg-center bg-no-repeat transition-all duration-300"
-        style={{ backgroundImage: `url(${isDarkMode ? bg_dark : bg_light})` }}
-      >
+    <div className="relative w-full min-h-screen p-3 bg-black dark:bg-indigo-900 overflow-x-hidden overflow-y-auto transition-colors duration-500">
+      <div className="relative z-10">
         <div className="flex justify-center">
           <Navbar />
         </div>
         <Hero />
+        <Features/>
+        <Contact/>
+        <span className="right-0 bottom-0 fixed cursor-pointer">
+          <Top/>
+        </span>
       </div>
     </div>
   );
