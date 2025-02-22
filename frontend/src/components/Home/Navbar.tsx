@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed mt-5 top-0 flex items-center justify-center rounded-3xl w-[50%] px-6 
+      className="fixed mt-10 top-0 flex items-center justify-center rounded-3xl w-[50%] px-6 
                  bg-white/50 dark:bg-indigo-900/50 backdrop-blur-md py-1 z-50 
                  transition-colors duration-300"
       initial={{ y: -100 }}

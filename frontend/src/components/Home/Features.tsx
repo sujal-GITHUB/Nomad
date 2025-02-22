@@ -173,7 +173,7 @@ export default function Features() {
           viewport={{ once: true }}
         >
           <motion.button 
-            className="bg-gradient-to-r cursor-pointer from-gray-700 to-gray-500 dark:from-purple-500 dark:to-indigo-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 "
+            className="bg-gradient-to-r cursor-pointer from-gray-700 to-gray-500 dark:from-purple-500 dark:to-indigo-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 "
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
           >

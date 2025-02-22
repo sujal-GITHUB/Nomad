@@ -294,7 +294,7 @@ export default function Contact() {
               >
                 <motion.button
                   type="submit"
-                  className="bg-gradient-to-r cursor-pointer from-gray-800 to-gray-600 dark:from-purple-500 dark:to-indigo-600 text-white px-8 py-4 rounded-xl flex items-center font-bold shadow-xl"
+                  className="bg-gradient-to-r cursor-pointer from-gray-800 to-gray-600 dark:from-purple-500 dark:to-indigo-600 text-white px-8 py-4 rounded-full flex items-center font-bold shadow-xl"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.95 }}
                 >
