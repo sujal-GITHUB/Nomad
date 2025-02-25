@@ -24,7 +24,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen p-3 bg-black dark:bg-indigo-900 overflow-x-hidden overflow-y-auto transition-colors duration-500">
+    <div className="relative w-full min-h-screen p-3 bg-black  overflow-x-hidden overflow-y-auto transition-colors duration-500">
       <div className="relative z-10">
         <div className="flex justify-center">
           <Navbar />

@@ -33,3 +33,20 @@ body {
 * {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
+
+@layer base {
+  :root {
+    --chart-1: 226 96% 74%;
+    --chart-2: 252 95% 76%;
+    --chart-3: 330 84% 70%;
+    --chart-4: 158 74% 52%;
+    --chart-5: 217 91% 67%;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
